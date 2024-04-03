@@ -1,0 +1,213 @@
+/* In a CSS file a comment is written inbetween forward slashes and asterisks (with the same shortcut) */
+
+html {
+    font-size: 1.3vw;       /* This makes your fontsize responsive to the view-width of the viewport (the size of a browser window) */
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #000000;        /* Color of text */
+    background-color: #fcfdfb;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1 rem;        /* rem refers back to the root em, the fontsize in the html element above*/
+    margin: 0;
+    width: 100vw;       /* 100% of the viewport’s width */
+    line-height: 1.2;
+}
+
+header {
+    position: sticky;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    top: 0;
+    padding: 1rem;
+    width: auto;
+    z-index: 2;
+}
+
+nav {
+    display: block;
+}
+nav ul, #references ul {
+    list-style: none;       /* takes away the bullets */
+    padding: 0;
+} 
+nav h2, #colophon h2 {
+    display: none;
+}
+#mobile-nav {
+    display: none;
+}
+
+.subchapter {
+    padding-left: 1rem;
+}
+.subchapter a {
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+
+main {
+    margin: 1rem;
+}
+section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1rem;
+    border-top: 1px solid rgb(0, 255, 60);
+    margin-bottom: 3rem;
+}
+
+footer {
+    padding: 1rem;
+    background-color: #999;
+    color: #eee;
+}
+
+
+a, a:visited {
+    color: #ea00ff;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+h2 {
+    font-weight: normal;
+    color: rgb(255, 0, 242);
+}
+
+h2, h3, section p, #references ul {
+    grid-column-start: 4;
+    grid-column-end: 10;
+}
+
+h3 {
+    padding-left: 2rem;
+    font-weight: normal;
+    color: #cf3dec;
+}
+
+p {
+    margin-block-start: 0;
+}
+
+.p--date {
+    color: grey;
+    right: 0;
+    
+}
+
+s {
+    margin-block-start: 0;
+}
+
+.s--name {
+    color: rgb(239, 0, 207);
+    font-weight: bold;
+    right: 0;
+    
+}
+
+
+.rounded-box {
+    background-color: rgb(219, 219, 219);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+place-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    color: #d003bb;
+    line-height: 1.7;
+}
+
+
+figure {
+    position: sticky;
+    top: 0rem;
+    margin: 0;
+    margin-bottom: 0rem;
+    grid-column-start: 11;
+    grid-column-end: 13;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+img {
+    width: 100%;
+    filter: none;
+    height: 10rem;
+    object-fit: contain;
+}
+img:hover {
+    filter: none;
+}
+
+figcaption {
+    font-size: 0.6rem;
+    place-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #d003bb;
+    line-height: 1.7;
+}
+
+
+.footnote {
+    vertical-align: super;
+    font-size: 0.8rem;
+}
+.refnr {
+    width: 4rem;
+    display: block;
+}
+#references li {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.tiles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(tiles1.jpeg);
+    background-repeat: repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+@media only screen and (max-width:425px) {
+    html {
+        font-size: 16px;
+    }
+    header {
+        background-color: inherit;
+    }
+    nav {
+        display: none;
+    }
+    #mobile-nav {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        text-decoration: none;
+    }
+    section {
+        display: block;
+    }
+    figure {
+        position: relative;
+    }
+
+    
+}
